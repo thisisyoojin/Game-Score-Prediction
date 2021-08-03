@@ -1,4 +1,4 @@
-# Predict-video-game-buyers
+# Predict steam sales & playtime
 
 ## Project brief
 
