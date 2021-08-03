@@ -12,8 +12,8 @@ The gaming market is huge
 - Every day 25 new games are released on Steam
 
 
-Game developers have skills to develop a game, but they are not sure what game players love to play.
-Publishers have many possible games to publish, but they want to know which one will sell the most.
+Game developers have developed a game but they don’t know how to sell it.
+Publishers have many possible games to publish, they want to know which one they need to publish.
 
 To solve this issue,
 we can reate a model to predict the average sales and playtime based on the features of a game!
