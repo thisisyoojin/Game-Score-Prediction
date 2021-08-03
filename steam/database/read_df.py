@@ -40,6 +40,12 @@ def create_df():
 
     app_df = app_df.join(developer_df).join(genre_df).join(publisher_df).join(achievement_df).join(playing_df)
     app_df.dropna(subset=['Total_buyers'], inplace=True)
-    X, y = app_df.iloc[:,:-1], app_df['Total_buyers']
+    app_df.dropna(subset=['Playtime'], inplace=True)
+
+    app_df['Target'] = (app_df['Total_buyers'] + app_df['Playtime']) / 2
+
+    cols = [c for c in app_df.columns if c not in ['Total_buyers', 'Playtime', 'Target']]
+
+    X, y = app_df.loc[:, cols], app_df['Target']
 
     return X, y
