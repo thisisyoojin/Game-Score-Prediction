@@ -80,14 +80,17 @@ Label
 
 ### Models
 
-Machine Learning models
-- Baseline
-- KNN
-- SVR
-- Extra tree
+Baseline
+- Linear Regression
+ 
+Tree-based models
 - Random Forest
 - XGBoost
+- LightBGM
 
+Deep Learning models
+- CNN(3 layers)
+- Resnet50
 
 
 ## Score
