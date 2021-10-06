@@ -1,4 +1,5 @@
-# Predict steam sales & playtime
+# Game Score Prediction
+
 
 ## Project brief
 
@@ -18,6 +19,11 @@ Publishers have many possible games to publish, they want to know which one they
 To solve this issue,
 we can reate a model to predict the average sales and playtime based on the features of a game!
 
+## Project workflow
+- Data collection with Web Crawling and API
+- Data cleaning & store in AWS
+- Prediction with ensenble tree-models/Deep neural networks
+- Get best model by comparing multiple models
 
 ## Data
 
@@ -29,10 +35,11 @@ The dataframe has following features:
 - Type
 - Price
 - Rating
+- Genre
 - Release_Date
 - Required_Age
 - Is_Multiplayer
-- Genre
+
 - Achievement Percentage
 - Publisher
 - Developer
@@ -40,7 +47,9 @@ The dataframe has following features:
 With these features, we are going to predict the average of sales and playtime of the game.
 -Target: (Total_buyers + Playtime)/2
 
-## Results
+
+## Usage
+
 
 ### Validation
 Models | Val_score
@@ -74,6 +83,15 @@ Day | 0.035
 ## Usage
 
 ### Validation
+
+Predict metacritic score
+If you want to predict predict metacritic score.
+
+```bash
+python main.py score -d demo_data.yaml
+```
+demo_data then you can see the score.
+
 ```
 from preprocess import prepare_dataset
 from validation.models import RidgeCV, LassoCV, KnnCV, SvrCV, RandomForestCV, ExtraTreeCV
